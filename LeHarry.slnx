@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="LeHarry/LeHarry.vcxproj" />
+  <Project Path="LeHarry/LeHarry.vcxproj" Id="7ee3e43e-4dee-47ad-a0eb-b0650722d103" />
 </Solution>
