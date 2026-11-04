@@ -1,17 +1,84 @@
+// Đây là bài tập ngoài nên thầy thông cảm, bài code tìm ước chung nó đơn giản và ngắn gọn hơn
+// nhưng vì em muốn tự làm nên nó khá là dài ạ :)))
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//
+//int a, b, d, e;
+//char c;
+//void main()
+//{
+//    printf("\t\t chuong trinh tim uoc chung lon nhat cua 2 uoc so a va b\n\n");
+//    
+//    do
+//    {
+//        printf("nhap vao uoc so a: ");
+//        scanf("%d", &a);
+//        printf("nhap vao uoc so b: ");
+//        scanf("%d", &b);
+//        int i = 1, max1 = 0, max2 = 0;
+//        for (i; i <= a; i++)
+//        {
+//            d = a % i;
+//            if (d == 0) {
+//                printf("cac so chia het cho uoc a la: %d\n", i);
+//                if (i > max1)
+//                {
+//                    max1 = i;
+//                }
+//            }
+//            
+//        }
+//        int j = 1;
+//        for (j; j <= b; j++)
+//        {
+//            e = b % j;
+//            if (e == 0) {
+//                printf("\ncac so chia het cho uoc b la: %d", j);
+//                if (j > max2)
+//                {
+//                    max2 = j;
+//                }
+//            }
+//        }
+//        printf("\n\nuoc lon nhat cua a=%d va b= %d", max1, max2);
+//        while (max1 != max2) {
+//            (max1 > max2) ? printf("\n\nuoc chung lon nhat cua a va b= %d", max1 = max1 - max2) :
+//                printf("\n\nuoc chung lon nhat cua a va b= %d", max2 = max2 - max1);
+//        }
+//        getchar();
+//        printf("\n\nban co muon tiep tuc khong(y/n): ");
+//        scanf("%c", &c);
+//    }while (c == 'y' || c == 'Y');
+//}
+
+// bai tap doan so
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <time.h>
+//
+//void main()
+//{
+//	int mk = 0;
+//	int sodu = 100000000;
+//	int mkht = 456876;
+//	printf("Nhap vao mat khau ngan hang cua ban: ");
+//	scanf("%d", &mk);
+//
+//}
 //bai1
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-
-void main()
-{
-	int n;
-	printf("Nhap vao so nguyen n: ");
-	scanf("%d", &n);
-	n > 0 ? printf("day la so nguyen duong") :
-		n < 0 ? printf("day la so nguyen am ") :
-		printf("So ban vua nhap = 0");
-}
-
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//
+//void main()
+//{
+//	int n;
+//	printf("Nhap vao so nguyen n: ");
+//	scanf("%d", &n);
+//	n > 0 ? printf("day la so nguyen duong") :
+//		n < 0 ? printf("day la so nguyen am ") :
+//		printf("So ban vua nhap = 0");
+//}
 //bai2
 //#define _CRT_SECURE_NO_WARNINGS
 //#include<stdio.h>
@@ -128,11 +195,13 @@ void main()
 //			  printf("Phep cong %d x %d = %d", a, b, a * b);
 //			  break;
 //		  case '/':
-//			  printf("Phep cong %d / %d = %d", a, b, a / b);
+//			  printf("Phep cong %d / %d = %d", a, b, a * 1.0 / b);
 //			  break;
+//        default:
+//            printf("phep tinh khong hop le");
+//            break;
 //	}
 //}
-
 //bai 7
 //#define _CRT_SECURE_NO_WARNINGS
 //#include<stdio.h>
@@ -158,7 +227,7 @@ void main()
 //void main()
 //{
 //	int n = 0;
-//    int a;
+//  int a=0;
 //	printf("Nhap vao so nguyen n: ");
 //	scanf("%d", &n);
 //
@@ -254,7 +323,3 @@ void main()
 //	printf(" vay tich cua a va b: %d\n", tich = a * b);
 //	printf(" vay thuong cua a va b: %.2f\n", thuong = a / b);
 //}
-
-
-
-
