@@ -1,3 +1,67 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int a, b; // a là mật khẩu người dùng nhập vào, b là số tiền mà người dùng muốn rút tiền.
+int c = 756890;// c là mật khẩu mà người dùng đặt ở hệ thống.
+int e = 10000000; // số tiền hiện có của người sử dụng trong tài khoản ngân hàng
+char d, cc;
+
+void main()
+{
+	printf("\t\t ATM MB Bank\n\n");
+	do
+	{
+		printf("Vui long nhap mat khau de rut tien ( MK nhap vao gom 6 chu so, vui long khong nhap cac ky tu khac): ");
+		scanf("%d", &a);
+		while (getchar() != '\n'); // dùng để xóa ký tự rác đọc các ký tự rác đến khi nào nhấn phím enter thì sẽ out khỏi vòng lặp này.
+		if (a != c)
+		{
+			for (int i = 3;i>0;i--)
+			{
+				printf("\nban con lai %d lan nhap thu (NOTE: Khong nhap sai qua 3 lan)\n", i);
+				printf("Vui long nhap mat khau de rut tien ( MK nhap vao gom 6 chu so, vui long khong nhap cac ky tu khac): ");
+				scanf("%d", &a);
+				while (getchar() != '\n');// dùng để xóa ký tự rác đọc các ký tự rác đến khi nào nhấn phím enter thì sẽ out khỏi vòng lặp này. 
+				if (i == 1) {
+					if (a != c)
+					{
+						printf("\ntai khoan cua ban da bi khoa vui long lai sau 24h");
+						goto cc;//thoát hẳn khỏi hàm main out luôn chương trình
+					}
+					else break;
+				}
+				if (a == c) {
+					break;
+				}
+			}
+		}
+		printf("\nBan da nhap dung mat khau");
+		printf("\nso tien trong tai khoan cua ban la: %d", e);
+		
+		while (1)
+		{
+			printf("\nNhap vao so tien ban muon rut: ");
+			int f = scanf("%d", &b);//lưu giá trị scanf(). bản chất nếu mà scanf() đúng nó sẽ trả về giá trị 1 (true), còn sai thì trả về giá trị 0 (false)
+			while (getchar() != '\n');
+			if (0 < b && b <= e && f == 1)
+			{
+				break;
+			}
+			else
+			{
+				printf("ban da nhap sai, vui long nhap lai");
+			}
+		}
+		printf("so tien ban muon rut la: %d\n", b);
+		printf("so du hien tai con lai trong tai khoan cua ban la %d\n", e - b);
+		printf("Quy khach da giao dich thanh cong, cam on quy khach\n\n");
+		printf("Ban co muon tiep tuc giao dich, vui long nhap (y/n): ");
+		scanf("%c", &d);
+	} while (d == 'y' || d == 'Y');
+	cc:
+	return 0;
+}
+
 // Đây là bài tập ngoài nên thầy thông cảm, bài code tìm ước chung nó đơn giản và ngắn gọn hơn
 // nhưng vì em muốn tự làm nên nó khá là dài ạ :)))
 //#define _CRT_SECURE_NO_WARNINGS
