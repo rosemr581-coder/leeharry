@@ -1,4 +1,29 @@
-//BTVN 6/11
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+void main()
+{
+	int a[] = { 4,9,2,-1,7 };
+	int len = sizeof(a) / sizeof(a[0]);
+	int max = a[0];
+	int min = a[0];
+	for (int i = 0; i < len; i++)
+	{
+	}
+	printf("phan tu lon nhat la: %d\n", max);
+	printf("phan tu be nhat la: %d", min);
+
+}
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//
+//void main()
+//{
+//	int arr[] = { 2,4,6,8,10 };
+//	int len = sizeof(arr) / sizeoff(arr[0]);
+//	printf("Tong cac phan tu la: %d\n", arr[0] + arr[1] +arr[2] + arr[3] + arr[4]);
+//	printf("Tong cac phan tu la: %.2f\n", (arr[0] + arr[1] + arr[2] + arr[3] + arr[4])*(1.0) / len );
+//}
 //7.
 //#define _CRT_SECURE_NO_WARNINGS
 //#include<stdio.h>
@@ -10,7 +35,7 @@
 //	int a = 0;
 //	int b = 0;
 //	float fx = 0;
-//	int n = 1000;
+//	int n = 1000;sizeof(arr)
 //	float h = 0;
 //	float tong = 0;
 //	int i = 1;
