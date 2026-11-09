@@ -1,31 +1,31 @@
 //BTVN 6/11
 //7.
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-#include<math.h>
-
-void main()
-{
-	printf("\t\t Chuong trinh tinh tich phan fx=x^2 theo phuong phap hinh thang voi tan so lay mau la 1000 lan\n\n");
-	int a = 0;
-	int b = 0;
-	float fx = 0;
-	int n = 1000;
-	float h = 0;
-	float tong = 0;
-	int i = 1;
-	printf("Nhap vao vao so nguyen a: ");
-	scanf("%d", &a);
-	printf("Nhap vao vao so nguyen b: ");
-	scanf("%d", &b);
-	h = (b - a) / (1.0 * n);
-	for (i; i <= n - 1; i++)
-	{
-		tong += pow(a + (i * h), 2);
-	}
-	fx = (h / 2) * (pow(a, 2) + 2 * tong + pow(b, 2));
-	printf("Vay fx= %.2f", fx);
-}
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//#include<math.h>
+//
+//void main()
+//{
+//	printf("\t\t Chuong trinh tinh tich phan fx=x^2 theo phuong phap hinh thang voi tan so lay mau la 1000 lan\n\n");
+//	int a = 0;
+//	int b = 0;
+//	float fx = 0;
+//	int n = 1000;
+//	float h = 0;
+//	float tong = 0;
+//	int i = 1;
+//	printf("Nhap vao vao so nguyen a: ");
+//	scanf("%d", &a);
+//	printf("Nhap vao vao so nguyen b: ");
+//	scanf("%d", &b);
+//	h = (b - a) / (1.0 * n);
+//	for (i; i <= n - 1; i++)
+//	{
+//		tong += pow(a + (i * h), 2);
+//	}
+//	fx = (h / 2) * (pow(a, 2) + 2 * tong + pow(b, 2));
+//	printf("Vay fx= %.2f", fx);
+//}
 //9. 
 //#define _CRT_SECURE_NO_WARNINGS
 //#include<stdio.h>
@@ -146,8 +146,11 @@ void main()
 //                    UCLN = max2;
 //                }
 //            }
+//            if (max1 == max2) {
+//            UCLN = max1;
+//            }
 //            printf("\n\nuoc chung lon nhat cua a va b la: %d", UCLN);
-//            BCNN = (a * b) / (float)UCLN;
+//            BCNN = (a * b) / (1.0 *UCLN);
 //            printf("\nVay boi chung nho nhat cua 2 so a= %d va b = %d la: %.1f", a, b, BCNN);
 //        }
 //		printf("\n\nban co muon tiep tuc khong(y/n): ");
@@ -166,6 +169,7 @@ void main()
 //    
 //    do
 //    {
+//        int UCLN = 0;
 //        printf("nhap vao uoc so a: ");
 //        scanf("%d", &a);
 //        printf("nhap vao uoc so b: ");
@@ -208,7 +212,10 @@ void main()
 //                UCLN = max2;
 //            }
 //        }
-//        printf("\\n\nVay uoc chung lon nhat cua a va b la: %d", UCLN);
+//        if (max1 == max2) {
+//            UCLN = max1;
+//        }
+//        printf("\n\nVay uoc chung lon nhat cua a va b la: %d", UCLN);
 //        getchar();
 //        printf("\n\nban co muon tiep tuc khong(y/n): ");
 //        scanf("%c", &c);
