@@ -1,19 +1,152 @@
+//bai5.
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//void main()
+//{
+//    int n = 0;
+//    int a[100] = { 0 };
+//    int i = 0;
+//    printf("Nhap vao so nguyen n (1 <= n <= 100 ): ");
+//    scanf("%d", &n);
+//    for (i = 0; i < n; i++)
+//    {
+//        printf("a[%d] = ", i);
+//        scanf(" %d", &a[i]);
+//    }
+//    printf("Mang ban nhap gom: ");
+//    for (int i = 0; i < n; i++)
+//    {
+//        printf("%d ", a[i]);
+//    }
+//    int dem = 0;
+//    printf("\nCac so nguyen to trong mang la: ");
+//    for (int j = 0; j < n; j++) 
+//    {
+//        int SNT = 1; // Giả sử a[j] là số nguyên tố
+//        if (a[j] < 2)
+//        {
+//            SNT = 0; // Nhỏ hơn 2 không phải số nguyên tố
+//        }
+//        else
+//        {
+//            
+//            for (int k = 2; k < a[j]; k++) // Kiểm tra xem a[j] có chia hết cho số nào từ 2 đến chính nó không
+//            {
+//                if (a[j] % k == 0)
+//                {
+//                    SNT = 0; // Chia hết -> Không phải số nguyên tố
+//                    break;
+//                }
+//            }
+//        }
+//        if (SNT == 1)  // Nếu SNT vẫn bằng 1 tức là đúng là số nguyên tố
+//        {
+//            printf("%d ", a[j]);
+//            dem++;
+//        }
+//    }
+//    if (dem == 0)
+//    {
+//        printf("\nKhong co so nguyen to\n");
+//    }
+//    else
+//    {
+//        printf("\nSo luong: %d\n", dem);
+//    }
+//}
+
+//bai6.
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//void main()
+//{
+//	int a[100];
+//	int n = 1;
+//	printf("Nhap vao nhap so luong chu phan tu trong mang a: ");
+//	scanf("%d", &n);
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("Nhap vao cac phan tu vao mang a: ", i);
+//		scanf("%d", &a[i]);
+//	}
+//	printf("\nCac phan tu trong mang a la: ");
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("\t%d", a[i]);
+//	}
+//	printf("\n");
+//	printf("\nCac phan tu xao tron lai trong mang a la: ");
+//	for (int i = n-1; i >= 0; i--)
+//	{
+//		printf("\t%d", a[i]);
+//	}
+//}
+
+//bai 7
 #define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
+#include <stdio.h>
 
 void main()
 {
-	int a[] = { 4,9,2,-1,7 };
-	int len = sizeof(a) / sizeof(a[0]);
-	int max = a[0];
-	int min = a[0];
-	for (int i = 0; i < len; i++)
+	int a[100];
+	int n = 1;
+	printf("Nhap vao nhap so luong chu phan tu trong mang a: ");
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++)
 	{
+		printf("Nhap vao cac phan tu vao mang a: ", i);
+		scanf("%d", &a[i]);
 	}
-	printf("phan tu lon nhat la: %d\n", max);
-	printf("phan tu be nhat la: %d", min);
-
+	printf("\nCac phan tu trong mang a la: ");
+	for (int i = 0; i < n; i++)
+	{
+		printf("\t%d", a[i]);
+	}
+	int x = 1;
+	int b = 0;
+	printf("\n\nNhap vao so nguyen x: ");
+	scanf("%d", &x);
+	printf("\n");
+	printf("vi tri cac phan tu trong mang giong x: ");
+	for (int i = 0; i < n; i++)
+	{
+		if ( x == a[i])
+		{
+			printf("\t%d", i+1);
+			if (x != a[i])
+			{
+				printf("\nKhong tim thay");
+				printf("Neu ban khong thay bat ky gia tri nao thi khong co phan tu nao giong x ca :))) con neu co thi ok)");
+			}
+		}
+	}
 }
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//
+//void main()
+//{
+//	int a[] = { 4,9,2,-1,7 };
+//	int len = sizeof(a) / sizeof(a[0]);
+//	int max = a[0];
+//	int min = a[0];
+//	for (int i = 0; i < len; i++)
+//	{
+//		if (a[i] > max)
+//		{
+//			max = a[i];
+//		}
+//		if (a[i] < min)
+//		{
+//			min = a[i];
+//		}
+//	}
+//	printf("phan tu lon nhat la: %d\n", max);
+//	printf("phan tu be nhat la: %d", min);
+//}
+// 
 //#define _CRT_SECURE_NO_WARNINGS
 //#include<stdio.h>
 //
