@@ -1,3 +1,358 @@
+//bai tap tai lop.
+//Bai8.
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//void main()
+//{
+//	int a[100] = { 0 };
+//	int n = 0;
+//	printf("Nhap vao so nguyen n: ");
+//	scanf("%d", &n);
+//	
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("Nhap vao cac phan tu mang a[%d] = ", i);
+//		scanf("%d", &a[i]);
+//	}
+//	printf("\n ");
+//	int kiem_tra = 1;
+//	for (int i = 0; i < n; i++)
+//	{
+//		if (a[i] < a[i - 1])
+//		{
+//			kiem_tra = 0;
+//			break;
+//		}
+//	}
+//	if (kiem_tra)
+//	{
+//		printf("\nMang tang dan ");
+//	}
+//	else
+//	{
+//		printf("\n Mang khong tang dan\n");
+//	}
+//	printf("\n");
+//}
+//Bai9.
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//void main()
+//{
+//	int a[100] = { 0 };
+//	int n = 0;
+//	printf("Nhap vao so nguyen n: ");
+//	scanf("%d", &n);
+//
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("Nhap vao cac phan tu mang a[%d] = ", i);
+//		scanf("%d", &a[i]);
+//	}
+//	printf("\n ");
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("%d ", a[i]);
+//	}
+//	for (int i = 0; i < n; i++)
+//	{
+//		for (int j = i + 1; j < n; j++)
+//		{
+//			if (a[i] > a[j])
+//			{
+//				int temp = a[i];
+//				a[i] = a[j];
+//				a[j] = temp;
+//			}
+//		}
+//	}
+//	printf("\nMang sau khi lap: ");
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("%d ", a[i]);
+//	}
+//}
+//Bai10.
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//void main()
+//{
+//	int a[100] = { 0 };
+//	int n = 0;
+//	printf("Nhap vao so nguyen n: ");
+//	scanf("%d", &n);
+//
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("Nhap vao cac phan tu mang a[%d] = ", i);
+//		scanf("%d", &a[i]);
+//	}
+//	printf("\n ");
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("%d ", a[i]);
+//	}
+//	int k = 0;
+//	printf("\nNhap vao vi tri k muon xoa tren mang: ");
+//	scanf("%d", &k);
+//	for (int i = k; i < n - 1; i++) 
+//	{
+//		a[i] = a[i + 1];
+//	}
+//	n--;
+//	printf("Mang sau khi xoa tai vi tri k: ");
+//	for (int i = 0; i < n; i++) 
+//	{
+//		printf("%d ", a[i]);
+//	}
+//	printf("\n");
+//}
+//bai11.
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//void main()
+//{
+//	int a[100] = { 0 };
+//	int n = 0;
+//	printf("Nhap vao so nguyen n: ");
+//	scanf("%d", &n);
+//
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("Nhap vao cac phan tu mang a[%d] = ", i);
+//		scanf("%d", &a[i]);
+//	}
+//	printf("\n ");
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("%d ", a[i]);
+//	}
+//	int k = 1;
+//	int x = 0;
+//	printf("\nNhap vao vi tri k ban muon chen vao mang: ");
+//	scanf("%d", &k);
+//	printf("Nhap vao so nguyen x ban muon chen vao mang: ");
+//	scanf("%d", &x);
+//	for (int i = n; i > k; i--)
+//	{
+//		a[i] = a[i - 1];
+//	}
+//	a[k] = x;// Gán x vào vị trí k
+//	n++;// Tăng số lượng phần tử lên 1
+//	for (int i = 0; i < n; i++) 
+//	{
+//		printf("%d ", a[i]);
+//	}
+//	printf("\n");
+//
+//}
+//bai12.
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//void main()
+//{
+//	int a[100] = { 0 };
+//	int n = 0;
+//	printf("Nhap vao so nguyen n: ");
+//	scanf("%d", &n);
+//
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("Nhap vao cac phan tu mang a[%d] = ", i);
+//		scanf("%d", &a[i]);
+//	}
+//	printf("\n ");
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("%d ", a[i]);
+//	}
+//    
+//    for (int i = 0; i < n; i++)
+//    {
+//        int daXuatHien = 0;
+//        for (int j = 0; j < i; j++) 
+//        {
+//            if (a[j] == a[i]) 
+//            {
+//            daXuatHien = 1;
+//            break;
+//            }
+//        }
+//   
+//        if (!daXuatHien)  // Nếu chưa xuất hiện trước đó, tiến hành đếm số lần xuất hiện từ i đến hết mảng
+//        {
+//        int dem = 0;
+//        for (int j = i; j < n; j++) 
+//        {
+//            if (a[j] == a[i]) 
+//            {
+//                dem++;
+//            }
+//        }
+//        printf("\n");
+//        printf("%d: %d lan\n", a[i], dem);
+//        }
+//    }
+//}
+
+//bai13.
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+void main()
+{
+    int a[100] = { 0 };
+    int n = 0;
+    int choice = 0;
+    int daNhap = 0; // Biến kiểm tra xem đã nhập mảng chưa
+
+    do {
+        printf("\n================ MENU ================\n");
+        printf("1. Nhap mang\n");
+        printf("2. Xuat mang\n");
+        printf("3. Tim max/min\n");
+        printf("4. Dem so chan/le\n");
+        printf("5. Sap xep tang dan\n");
+        printf("6. Tim kiem x\n");
+        printf("0. Thoat\n");
+        printf("======================================\n");
+        printf("Lua chon cua ban: ");
+        scanf("%d", &choice);
+
+        switch (choice)
+        {
+        case 1:
+            printf("Nhap vao so nguyen n: ");
+            scanf("%d", &n);
+            for (int i = 0; i < n; i++)
+            {
+                printf("Nhap vao cac phan tu mang a[%d] = ", i);
+                scanf("%d", &a[i]);
+            }
+            daNhap = 1; // Đánh dấu đã nhập mảng
+            break;
+
+        case 2:
+            if (!daNhap)
+            {
+                printf("Chua nhap mang! Vui long chon chuc nang 1 truoc.\n");
+                break;
+            }
+            printf("Mang hien tai: ");
+            for (int i = 0; i < n; i++)
+            {
+                printf("%d ", a[i]);
+            }
+            printf("\n");
+            break;
+
+        case 3:
+            if (!daNhap)
+            {
+                printf("Chua nhap mang! Vui long chon chuc nang 1 truoc.\n");
+                break;
+            }
+            if (n <= 0) break;
+            {
+                int max = a[0];
+                int min = a[0];
+                for (int i = 1; i < n; i++)
+                {
+                    if (a[i] > max) max = a[i];
+                    if (a[i] < min) min = a[i];
+                }
+                printf("Gia tri lon nhat (Max) = %d\n", max);
+                printf("Gia tri nho nhat (Min) = %d\n", min);
+            }
+            break;
+
+        case 4:
+            if (!daNhap)
+            {
+                printf("Chua nhap mang! Vui long chon chuc nang 1 truoc.\n");
+                break;
+            }
+            {
+                int chan = 0;
+                int le = 0;
+                for (int i = 0; i < n; i++)
+                {
+                    if (a[i] % 2 == 0) chan++;
+                    else le++;
+                }
+                printf("So luong so chan = %d\n", chan);
+                printf("So luong so le = %d\n", le);
+            }
+            break;
+
+        case 5:
+            if (!daNhap)
+            {
+                printf("Chua nhap mang! Vui long chon chuc nang 1 truoc.\n");
+                break;
+            }
+            // Sắp xếp tăng dần (Interchange Sort)
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = i + 1; j < n; j++)
+                {
+                    if (a[i] > a[j])
+                    {
+                        int temp = a[i];
+                        a[i] = a[j];
+                        a[j] = temp;
+                    }
+                }
+            }
+	        for (int i = 0; i < n; i++) 
+	         {
+		         printf("%d ", a[i]);
+	         }
+	         printf("\n");
+             break;
+
+        case 6:
+            if (!daNhap)
+            {
+                printf("Chua nhap mang! Vui long chon chuc nang 1 truoc.\n");
+                break;
+            }
+            {
+                int x = 0;
+                int found = 0;
+                printf("Nhap vao so nguyen x can tim: ");
+                scanf("%d", &x);
+                printf("Vi tri xuat hien cua %d: ", x);
+                for (int i = 0; i < n; i++)
+                {
+                    if (a[i] == x)
+                    {
+                        printf("%d ", i);
+                        found = 1;
+                    }
+                }
+                if (!found)
+                {
+                    printf("Khong tim thay trong mang!");
+                }
+                printf("\n");
+            }
+            break;
+
+        case 0:
+            printf("Thoat chuong trinh.\n");
+            break;
+
+        default:
+            printf("Lua chon khong hop le! Vui long chon lai.\n");
+        }
+    } while (choice != 0);
+}
 //bai5.
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
@@ -5,7 +360,7 @@
 //void main()
 //{
 //    int n = 0;
-//    int a[100] = { 0 };
+//    int a[100]= {0};
 //    int i = 0;
 //    printf("Nhap vao so nguyen n (1 <= n <= 100 ): ");
 //    scanf("%d", &n);
@@ -31,7 +386,7 @@
 //        else
 //        {
 //            
-//            for (int k = 2; k < a[j]; k++) // Kiểm tra xem a[j] có chia hết cho số nào từ 2 đến chính nó không
+//            for (int k = 2; k < a[j]/2; k++) // Kiểm tra xem a[j] có chia hết cho số nào từ 2 đến chính nó không
 //            {
 //                if (a[j] % k == 0)
 //                {
@@ -74,55 +429,57 @@
 //	printf("\nCac phan tu trong mang a la: ");
 //	for (int i = 0; i < n; i++)
 //	{
-//		printf("\t%d", a[i]);
+//		printf("%d ", a[i]);
 //	}
 //	printf("\n");
 //	printf("\nCac phan tu xao tron lai trong mang a la: ");
 //	for (int i = n-1; i >= 0; i--)
 //	{
-//		printf("\t%d", a[i]);
+//		printf("%d ", a[i]);
 //	}
 //}
 
 //bai 7
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//void main()
+//{
+//	int a[100];
+//	int n = 1;
+//	printf("Nhap vao nhap so luong chu phan tu trong mang a: ");
+//	scanf("%d", &n);
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("Nhap vao cac phan tu vao mang a: ", i);
+//		scanf("%d", &a[i]);
+//	}
+//	printf("\nCac phan tu trong mang a la: ");
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("\t%d", a[i]);
+//	}
+//	int x = 1;
+//	int b = 0;
+//	printf("\n\nNhap vao so nguyen x: ");
+//	scanf("%d", &x);
+//	printf("\n");
+//	printf("vi tri cac phan tu trong mang giong x: ");
+// int kiem_tra = 0;
+//	for (int i = 0; i < n; i++)
+//	{
+//		if ( x == a[i])
+//		{
+//			printf("\t%d", i+1);
+//          kiem_tra = 1;
+//		}
+//	}
+// if(kiem_tra == 0)
+// {
+//    printf("\nKhong tim thay");
+// }
+//}
 
-void main()
-{
-	int a[100];
-	int n = 1;
-	printf("Nhap vao nhap so luong chu phan tu trong mang a: ");
-	scanf("%d", &n);
-	for (int i = 0; i < n; i++)
-	{
-		printf("Nhap vao cac phan tu vao mang a: ", i);
-		scanf("%d", &a[i]);
-	}
-	printf("\nCac phan tu trong mang a la: ");
-	for (int i = 0; i < n; i++)
-	{
-		printf("\t%d", a[i]);
-	}
-	int x = 1;
-	int b = 0;
-	printf("\n\nNhap vao so nguyen x: ");
-	scanf("%d", &x);
-	printf("\n");
-	printf("vi tri cac phan tu trong mang giong x: ");
-	for (int i = 0; i < n; i++)
-	{
-		if ( x == a[i])
-		{
-			printf("\t%d", i+1);
-			if (x != a[i])
-			{
-				printf("\nKhong tim thay");
-				printf("Neu ban khong thay bat ky gia tri nao thi khong co phan tu nao giong x ca :))) con neu co thi ok)");
-			}
-		}
-	}
-}
 //#define _CRT_SECURE_NO_WARNINGS
 //#include<stdio.h>
 //
